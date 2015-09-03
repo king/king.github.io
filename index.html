@@ -1,23 +1,48 @@
+<!--
+King GitHub homepage
+
+https://king.com
+
+-->
+<!DOCTYPE html>
+
 <html>
   <head>
-    <title>King</title>
+    <title>King Open Source</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/king_github_style.css">
+    <link rel="stylesheet" type="text/css" href="css/octicons/octicons.css">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/strftime.js"></script>
+    <script type="text/javascript"src="js/repos.js"></script>
+    <script>  
+      $( document ).ready(function() {
+          addKingRepos();
+          getNumMembers();
+      });
+    </script>
   </head>
-  <body bgcolor=white>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid2x orangeBox">
+        <div id="logo"></div>
+      </div>
+      <div class="grid grid1x">
+        <div id="statistics" class="orangeBox">
+          <p>
+            <a href="https://github.com/king/repositories"><span class="mega-octicon octicon-mark-github"></span><span id="num-repos">...</span></a>
+            <a href="https://github.com/king?tab=members"><span class="mega-octicon octicon-organization"></span><span id="num-members">...</span></a>
+          </p>
+        </div>
 
-    <table border="0" cellpadding="10">
-      <tr>
-        <td>
-          <img src="images/king.png">
-        </td>
-         <tr>
-        </tr>
-        <td>
-          <h1>Coming soon...</h1>
-        </td>
-      </tr>
-    </table>
-
-    <p>This is the home page for the King repositories.</p>
-    
+        <div id="recent-repo" class="orangeBox">
+          <h1><span class="mega-octicon octicon-sync"></span>&nbsp;Recently updated</h1>
+          <ol id="recent-repo-list"></ol>
+        </div>
+      </div>
+      <ol id="repos"></ol>
+    </div>
   </body>
 </html>
