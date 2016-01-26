@@ -29,24 +29,23 @@
     </script>
   </head>
   <body>
+      <header>
+          <div id="main">
+            <div id="logo"></div>
+          </div>
+          <div class="reposAndMembers">
+                <a href="https://github.com/king/repositories"><span class="mega-octicon octicon-mark-github"></span><span id="num-repos">...</span></a>
+                    <a href="https://github.com/king?tab=members"><span class="mega-octicon octicon-organization"></span><span id="num-members">...</span></a>
+              </div>
+          <div id="statistics" class="">
+            <div id="recent-repo" class="">
+              <span>Recently updated repos:</span>
+              <ol id="recent-repo-list"></ol>
+            </div>
+          </div>
+      </header>
     <div id="wrapper" class="grid clearfix">
-      <div id="main" class="grid2x orangeBox">
-        <div id="logo"></div>
-      </div>
-      <div class="grid grid1x">
-        <div id="statistics" class="orangeBox">
-          <p>
-            <a href="https://github.com/king/repositories"><span class="mega-octicon octicon-mark-github"></span><span id="num-repos">...</span></a>
-            <a href="https://github.com/king?tab=members"><span class="mega-octicon octicon-organization"></span><span id="num-members">...</span></a>
-          </p>
-        </div>
-
-        <div id="recent-repo" class="orangeBox">
-          <h1><span class="mega-octicon octicon-sync"></span>&nbsp;Recently updated</h1>
-          <ol id="recent-repo-list"></ol>
-        </div>
-      </div>
-      <ol id="repos"></ol>
+      <ol id="repos" class="clearfix"></ol>
     </div>
   </body>
 </html>
